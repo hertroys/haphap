@@ -2,11 +2,6 @@
 
 class DishController extends BaseController
 {
-    // Gulp
-    // Live
-    // Markdown
-    // File upload
-
     /**
      * Display a randomized listing of the resource.
      * GET dish/

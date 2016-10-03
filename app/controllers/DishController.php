@@ -4,7 +4,7 @@ class DishController extends BaseController
 {
     /**
      * Display a randomized listing of the resource.
-     * GET dish/
+     * GET dish/rand
      *
      * @return Response
      */
@@ -22,7 +22,7 @@ class DishController extends BaseController
 
     /**
      * Display a listing of the resource.
-     * GET dish/overview
+     * GET dish/
      *
      * @return Response
      */

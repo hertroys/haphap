@@ -11,8 +11,14 @@
 |
 */
 
-Route::get('/', function () {
-    return Redirect::to('dish/rand');
+Route::group(array('namespace' => 'App\Controllers'), function()
+{
+    Route::match(['GET', 'POST'], 'dish/home', 'DishController@home');
+    Route::resource('dish', 'DishController');
+    Route::model('dish', 'App\Models\Dish');
 });
-Route::any('dish/rand', 'DishController@rand');
-Route::resource('dish', 'DishController');
+
+
+Route::get('/', function () {
+    return Redirect::to('dish/home');
+});

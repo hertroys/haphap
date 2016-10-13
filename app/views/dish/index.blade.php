@@ -7,7 +7,7 @@
             <a href='{{ route('dish.create') }}'>
                 <button type="button" class="btn btn-lg btn-success">nieuw</button>
             </a>
-            <a href='{{ url('dish/rand') }}'>
+            <a href='{{ url('dish/home') }}'>
                 <button type="button" class="btn btn-lg btn-primary">willekeurig</button>
             </a>
         </div>
@@ -22,7 +22,7 @@
                     <tr>
                         <td>{{ $i+1 }}.</td>
                         <td><a href='{{ route('dish.show', $dish->id) }}'>{{ $dish->name }}</a></td>
-                        <td>{{ implode(', ', $dish->tags()->lists('name')) }}</td>
+                        <td>{{ implode(', ', $dish->tags->lists('name')) }}</td>
                         <td>
                             {{ Form::open(['method'  => 'delete', 'route' => ['dish.destroy', $dish->id]]) }}
                                 {{ Form::hidden('id', $dish->id) }}

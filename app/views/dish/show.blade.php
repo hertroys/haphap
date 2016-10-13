@@ -1,7 +1,10 @@
 @extends('layout')
 
 @section('content')
-<div class="container">    
+<div class="container">
+
+    @include('messages')
+
     <div class='row'>
         <div class='col-xs-12 text-center'>
             <a href='{{ route('dish.edit', $dish->id) }}'>
@@ -10,7 +13,7 @@
             <a href='{{ route('dish.index') }}'>
                 <button type="button" class="btn btn-lg btn-primary">overzicht</button>
             </a>
-            <a href='{{ url('dish/rand') }}'>
+            <a href='{{ url('dish/home') }}'>
                 <button type="button" class="btn btn-lg btn-primary">willekeurig</button>
             </a>
         </div>
@@ -33,7 +36,7 @@
             @if($dish->image)
             <div class="form-group">
                 <label>Afbeelding</label>
-                <div class='image'><img src='{{ asset('img/'.$dish->image.'.jpg') }}' /></div>
+                <div class='image'><img src='{{ asset('img/'.$dish->image) }}' /></div>
             </div>
             @endif
         </div>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+  <title>Elix</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+  <style>
+  .markup-preview {
+    display: none;
+  }
+  @media screen and (min-width: 992px) {
+    .markup-preview {
+      display: block;
+    }
+  }
+  </style>
+</head>
+<body>
+
+  <div class='container-fluid'>
+
+  <div class='row'>
+    <div class='col-xs-2'></div>
+    <div class='col-xs-8'>
+      <div class='row'>
+        <div class='col-md-6' style='background-color: lightgreen;'>
+          <textarea v-model='unmarked'></textarea>
+        </div>
+        <div class='col-md-6 markup-preview' style='background-color: aliceblue;'>
+          <div v-html='marked'></div>
+        </div>
+      </div>
+    </div>
+    <div class='col-xs-2'></div>
+  </div>
+
+  </div>
+
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/vue@2.0.2/dist/vue.min.js"></script>
+  <script src="https://unpkg.com/marked@0.3.6/marked.min.js"></script>
+  <script>
+  new Vue({
+    el: '.container-fluid',
+    data: {
+      unmarked: ''
+    },
+    computed: {
+      marked: function () {
+        return marked(this.unmarked, {sanitize: true})
+      }
+    }
+  });
+  </script>
+</body>
+</html>

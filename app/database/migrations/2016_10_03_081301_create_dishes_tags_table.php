@@ -17,8 +17,10 @@ class CreateDishesTagsTable extends Migration
             $table->unsignedInteger('dish_id');
             $table->unsignedInteger('tag_id');
 
-            $table->foreign('dish_id')->references('id')->on('dishes');
-            $table->foreign('tag_id')->references('id')->on('tags');
+            $table->foreign('dish_id')->references('id')->on('dishes')
+                ->onUpdate('cascade')->onDelete('cascade');
+            $table->foreign('tag_id')->references('id')->on('tags')
+                ->onUpdate('cascade')->onDelete('cascade');
         });
     }
 

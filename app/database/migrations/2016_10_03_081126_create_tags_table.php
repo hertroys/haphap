@@ -15,8 +15,15 @@ class CreateTagsTable extends Migration {
         Schema::create('tags', function(Blueprint $table)
         {
             $table->increments('id');
-            $table->string('name');
+            $table->string('name')->unique();
+            $table->string('icon');
         });
+
+        DB::table('tags')->insert([
+            ['name' => 'snel', 'icon' => 'access_time'],
+            ['name' => 'goedkoop', 'icon' => 'monetization_on'],
+            ['name' => 'gezond', 'icon' => 'favorite']
+        ]);
     }
 
     /**

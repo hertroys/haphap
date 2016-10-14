@@ -4,7 +4,7 @@ app.home = {
       preventClicks: false
     });
     $('.tags > input[type="checkbox"]').change(function () {
-      $('form').submit();
+      $('form.tags').submit();
     });
   }
 };

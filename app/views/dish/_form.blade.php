@@ -18,7 +18,7 @@
       {{ Form::checkbox(
         'tags[]',
         $tag->id,
-        in_array($tag->id, $dish->tags()->lists('id')),
+        in_array($tag->id, $dish->tags->lists('id')),
         ['id' => 'tag'.$tag->id]
       ) }}
       {{ Form::label('tag'.$tag->id, $tag->name) }}

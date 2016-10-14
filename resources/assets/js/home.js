@@ -1,4 +1,4 @@
-app.splash = {
+app.home = {
   init: function () {
     new Swiper('.swiper-container', {
       preventClicks: false

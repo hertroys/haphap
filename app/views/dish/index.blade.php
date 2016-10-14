@@ -5,7 +5,7 @@
 
   @include('messages')
 
-  <div class='row'>
+  <div class='row top'>
     <div class='col-xs-12 text-center'>
       <a href='{{ route('dish.create') }}'>
         <button type="button" class="btn btn-lg btn-success">

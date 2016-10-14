@@ -10,7 +10,6 @@ Haphap is a [Laravel 4.2](https://laravel.com/docs/4.2) app for the gastronomica
 - RESTful resource controllers
 - Template composition with the Blade view engine
 - Validation, messaging and localization
-- [Vue.js](http://vuejs.org/) for interaction
 
 Additional tooling includes
 - Composer for PHP dependencies

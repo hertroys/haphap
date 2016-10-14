@@ -1,11 +1,9 @@
 @if($errors->any())
 <div class='row alert alert-danger'>
   <div class='col-xs-12 text-center'>
-    <ul>
-      @foreach ($errors->all('<li>:message</li>') as $message)
-      {{ $message }}
-      @endforeach
-    </ul>
+    @foreach ($errors->all('<div>:message</div>') as $message)
+    {{ $message }}
+    @endforeach
   </div>
 </div>
 @endif

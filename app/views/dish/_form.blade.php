@@ -1,4 +1,4 @@
-<div class='row'>
+<div class='row bottom'>
   <div class='col-xs-1 col-md-3'></div>
   <div class='col-xs-10 col-md-6'>
     <div class="form-group">
@@ -15,12 +15,9 @@
     </div>
     @foreach($tags as $tag)
     <div class="form-group">
-      {{ Form::checkbox(
-        'tags[]',
-        $tag->id,
-        in_array($tag->id, $dish->tags->lists('id')),
-        ['id' => 'tag'.$tag->id]
-      ) }}
+      <input type='checkbox' id='tag{{ $tag->id }}' name='tags[]' value='{{ $tag->id }}'
+        {{ in_array($tag->id, Input::old('tags', $dish->tags->lists('id'))) ? "checked='true'" : "" }}
+      />
       {{ Form::label('tag'.$tag->id, $tag->name) }}
     </div>
     @endforeach

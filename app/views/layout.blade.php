@@ -16,12 +16,6 @@
     >
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css">
     {{ HTML::style(elixir('css/all.css')) }}
-    <style>
-        .row.top {
-            margin-top: 15px;
-            margin-bottom: 15px;
-        }
-    </style>
 @show
 </head>
 <body>

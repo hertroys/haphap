@@ -17,3 +17,9 @@ div.image img {
     height: 100%;
     width: 100%;
 }
+.row.top {
+    margin-top: 15px;
+}
+.row.bottom {
+    margin-bottom: 15px;
+}

@@ -2,9 +2,6 @@
 
 @section('content')
 <div class="container-fluid">
-
-  @include('messages')
-
   <div class='row top'>
     <div class='col-xs-12 text-center'>
       <a href='{{ route('dish.index') }}'>

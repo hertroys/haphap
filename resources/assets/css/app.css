@@ -20,6 +20,9 @@ div.image img {
 .row.top {
     margin-top: 15px;
 }
+.row.top a:hover {
+    text-decoration: none;
+}
 .row.bottom {
     margin-bottom: 15px;
 }

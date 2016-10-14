@@ -6,7 +6,6 @@ use App\Test\TestCase;
 
 class DishTest extends TestCase
 {
-
     /**
      * A basic functional test example.
      *

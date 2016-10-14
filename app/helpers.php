@@ -1,11 +1,11 @@
 <?php
 
 if (! function_exists('elixir')) {
-/**
-        * Get the path to a versioned Elixir file.
-        *
-        * @param  string  $file
-        * @return string
+    /**
+     * Get the path to a versioned Elixir file.
+     *
+     * @param  string  $file
+     * @return string
     */
     function elixir($file)
     {
@@ -24,6 +24,12 @@ if (! function_exists('elixir')) {
 }
 
 if (!function_exists('isImage')) {
+    /**
+     * Check if the file extension starts with image.
+     *
+     * @param  Symfony\Component\HttpFoundation\File\UploadedFile  $file
+     * @return int|bool
+    */
     function isImage(Symfony\Component\HttpFoundation\File\UploadedFile $file)
     {
         return preg_match("/image\/(.*)/", $file->getMimeType());

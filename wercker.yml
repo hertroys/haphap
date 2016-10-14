@@ -9,5 +9,5 @@ build:
         code: phpunit --configuration phpunit.xml
     - script:
         name: codesniffer
-        code: phpcs c:/xampp/htdocs/haphap/app --standard='PSR2' --ignore='/database/*, /views'
+        code: phpcs app --standard='PSR2' --ignore='/database/*, /views'
 

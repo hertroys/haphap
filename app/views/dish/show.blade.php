@@ -28,7 +28,7 @@
       </div>
       <div class="form-group">
         <label>{{ trans('dish.description') }}</label>
-        <div>{{{ $dish->description }}}</div>
+        <div v-html='markdown({{ json_encode($dish->description) }})'></div>
       </div>
       <div class="form-group">
         <label>{{ trans('dish.tags') }}</label>
@@ -44,4 +44,20 @@
     <div class='col-xs-1 col-md-3'> </div>
   </div>
 </div>
+@stop
+
+@section('scripts')
+@parent
+<script src="https://unpkg.com/vue@2.0.2/dist/vue.js"></script>
+<script src="https://unpkg.com/marked@0.3.6/marked.min.js"></script>
+<script>
+new Vue({
+  el: '.container-fluid',
+  methods: {
+    markdown: function (raw) {
+      return marked(raw, {sanitize: true})
+    }
+  }
+});
+</script>
 @stop

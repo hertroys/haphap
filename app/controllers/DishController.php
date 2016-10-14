@@ -130,8 +130,7 @@ class DishController extends Controller
         $dish->tags()->sync(Input::get('tags', []));
 
         // Store the image, if present, and save its name.
-        if (
-            Input::hasFile('image')
+        if (Input::hasFile('image')
             && $name = $this->upload($dish, Input::file('image'))
         ) {
             $dish->fill(['image' => $name])->save();

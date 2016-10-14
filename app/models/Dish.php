@@ -16,7 +16,7 @@ class Dish extends Eloquent
 
     public static function withTags($tags = [], $count = 1)
     {
-        return static::whereHas('tags', function($q) use ($tags) {
+        return static::whereHas('tags', function ($q) use ($tags) {
             $q->whereIn('id', (array)$tags);
         }, '>=', $count)->get();
     }

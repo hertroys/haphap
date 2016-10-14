@@ -12,8 +12,7 @@ class CreateDishesTable extends Migration
      */
     public function up()
     {
-        Schema::create('dishes', function(Blueprint $table)
-        {
+        Schema::create('dishes', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name')->unique();
             $table->text('description');

@@ -2,7 +2,8 @@
 
 use App\Models\Dish;
 
-class DishTest extends TestCase {
+class DishTest extends TestCase
+{
 
     /**
      * A basic functional test example.
@@ -13,9 +14,5 @@ class DishTest extends TestCase {
     {
         $dish = new Dish;
         $this->assertTrue($dish->validate()->fails());
-
-        #$dish->name = 'SomeUniqueName';
-        #$this->assertTrue($dish->validate()->passes());
     }
-
 }

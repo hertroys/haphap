@@ -12,8 +12,7 @@ class CreateDishesTagsTable extends Migration
      */
     public function up()
     {
-        Schema::create('dishes_tags', function(Blueprint $table)
-        {
+        Schema::create('dishes_tags', function (Blueprint $table) {
             $table->unsignedInteger('dish_id');
             $table->unsignedInteger('tag_id');
 

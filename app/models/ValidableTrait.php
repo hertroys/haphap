@@ -3,7 +3,7 @@ namespace App\Models;
 
 use Validator;
 
-Trait Validable
+trait Validable
 {
     public function rules()
     {

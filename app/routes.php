@@ -11,8 +11,7 @@
 |
 */
 
-Route::group(array('namespace' => 'App\Controllers'), function()
-{
+Route::group(array('namespace' => 'App\Controllers'), function () {
     Route::match(['GET', 'POST'], 'dish/home', 'DishController@home');
     Route::resource('dish', 'DishController');
     Route::model('dish', 'App\Models\Dish');

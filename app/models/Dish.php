@@ -25,7 +25,7 @@ class Dish extends Eloquent
     }
 
     /**
-     * Return the dishes having at least $count tags.
+     * Return the dishes having at least $count of $tags.
      *
      * @param  array  $tags
      * @param  int  $count
@@ -39,7 +39,7 @@ class Dish extends Eloquent
     }
 
     /**
-     * Return the dishes having all of the tags.
+     * Return the dishes having all of the $tags.
      *
      * @param  arary  $tags
      * @return \Illuminate\Database\Eloquent\Collection

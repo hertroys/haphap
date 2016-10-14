@@ -2,11 +2,11 @@
   <div class='col-xs-1 col-md-3'></div>
   <div class='col-xs-10 col-md-6'>
     <div class="form-group">
-      {{ Form::label('name', 'Name') }}
+      {{ Form::label('name', trans('dish.name')) }}
       {{ Form::text('name', null, ['class' => 'form-control']) }}
     </div>
     <div class="form-group">
-      {{ Form::label('description', 'Beschrijving') }}
+      {{ Form::label('description', trans('dish.description')) }}
       {{ Form::textarea(
         'description',
         null,
@@ -25,7 +25,7 @@
     </div>
     @endforeach
     <div class="form-group">
-      {{ Form::label('image', 'Afbeelding') }}
+      {{ Form::label('image', trans('dish.image')) }}
       @if($dish->image)
       <div class='image'><img src='{{ asset('img/'.$dish->image) }}' /></div>
       @endif
@@ -33,7 +33,9 @@
     <div class="form-group">
       {{ Form::file('image', ['class' => 'form-control']) }}
     </div>
-    <button type="submit" class="btn btn-success btn-lg">opslaan</button>
+    <button type="submit" class="btn btn-success btn-lg">
+      {{ trans('global.save') }}
+    </button>
   </div>
   <div class='col-xs-1 col-md-3'></div>
 </div>

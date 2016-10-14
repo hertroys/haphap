@@ -1,24 +1,23 @@
 @extends('layout')
 
 @section('content')
-<div class="container">
+<div class="container-fluid">
 
-    @include('messages')
+  @include('messages')
 
-    <div class='row'>
-        <div class='col-xs-12 text-center'>
-            <a href='{{ route('dish.index') }}'>
-                <button type="button" class="btn btn-lg btn-primary">overzicht</button>
-            </a>
-            <!--<a href='{{ url('dish/home') }}'>
-                <button type="button" class="btn btn-lg btn-primary">willekeurig</button>
-            </a>-->
-        </div>
+  <div class='row'>
+    <div class='col-xs-12 text-center'>
+      <a href='{{ route('dish.index') }}'>
+        <button type="button" class="btn btn-lg btn-primary">
+          {{ trans('navigation.overview') }}
+        </button>
+      </a>
     </div>
+  </div>
 
-    {{ Form::model($dish, ['url' => 'dish', 'files' => true]) }}
-    @include('dish._form')
-    {{ Form::close() }}
+  {{ Form::model($dish, ['url' => 'dish', 'files' => true]) }}
+  @include('dish._form')
+  {{ Form::close() }}
 
 </div>
 @stop

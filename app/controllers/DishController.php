@@ -23,7 +23,7 @@ class DishController extends Controller
         $dishes = Dish::withAllTags($tagged)->shuffle()->take(5);
         // If $tagged is empty, the having threshold is 0,
         // i.e. the clause is vacuously true.
-        
+
         $tags = Tag::all();
         return View::make('dish.home', [
             'dishes' => $dishes,
@@ -137,7 +137,7 @@ class DishController extends Controller
         }
 
         return Redirect::route('dish.show', $dish->id)
-            ->withSuccess('Joechei');
+            ->withSuccess(trans('confirmation.dish_saved'));
     }
 
     /**
@@ -150,7 +150,8 @@ class DishController extends Controller
     public function destroy(Dish $dish)
     {
         $dish->delete();
-        return Redirect::route('dish.index');
+        return Redirect::route('dish.index')
+            ->withSuccess(trans('confirmation.dish_deleted'));
     }
 
     /**

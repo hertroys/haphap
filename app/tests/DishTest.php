@@ -1,6 +1,8 @@
 <?php
+namespace App\Test;
 
 use App\Models\Dish;
+use App\Test\TestCase;
 
 class DishTest extends TestCase
 {

@@ -1,6 +1,7 @@
 <?php
+namespace App\Test;
 
-class TestCase extends Illuminate\Foundation\Testing\TestCase
+class TestCase extends \Illuminate\Foundation\Testing\TestCase
 {
 
     /**

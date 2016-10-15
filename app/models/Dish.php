@@ -5,7 +5,7 @@ use Eloquent;
 
 class Dish extends Eloquent
 {
-    use Validable;
+    use Validatable;
 
     /**
      * The attributes that aren't mass assignable.

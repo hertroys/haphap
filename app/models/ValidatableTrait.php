@@ -3,7 +3,7 @@ namespace App\Models;
 
 use Validator;
 
-trait Validable
+trait Validatable
 {
     /**
      * Return the validation rules for the model.

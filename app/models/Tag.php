@@ -5,7 +5,7 @@ use Eloquent;
 
 class Tag extends Eloquent
 {
-    use Validable;
+    use Validatable;
 
     /**
      * Return the validation rules for the model.

@@ -20,7 +20,7 @@ class DishController extends Controller
     public function home()
     {
         $tagged = Input::get('tagged', []);
-        $dishes = Dish::withAllTags($tagged)->shuffle()->take(5);
+        $dishes = Dish::withAllTags($tagged)->shuffle();
         // If $tagged is empty, the having threshold is 0,
         // i.e. the clause is vacuously true.
 

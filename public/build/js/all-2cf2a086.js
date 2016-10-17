@@ -1,1 +1,0 @@
-var app={};app.home={init:function(){new Swiper(".swiper-container",{preventClicks:!1}),$('.tags > input[type="checkbox"]').change(function(){$("form.tags").submit()})}};

@@ -17,7 +17,6 @@ Route::group(array('namespace' => 'App\Controllers'), function () {
     Route::model('dish', 'App\Models\Dish');
 });
 
-
 Route::get('/', function () {
     return Redirect::to('dish/home');
 });

@@ -17,4 +17,4 @@ Additional tooling includes
 - Elixir/Gulp for asset management
 - [Wercker](http://wercker.com/)/Docker for automated unit testing
 
-## [See a demo here](http://www.hertroys.nl)
+## [See a demo here](http://haphap.hertroys.nl)
